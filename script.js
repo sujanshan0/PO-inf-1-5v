@@ -92,14 +92,14 @@ class Raket {
   constructor(x,y){
     this.x = x;
     this.y = y;
-    this.snelheid
+    this.snelheid = random
   }
 }
 
 
 
 
-  beweeg() {
+  beweeg(); {
     this.x += floor(random(-1,2))*this.stapGrootte;
     this.y += floor(random(-1,2))*this.stapGrootte;
 
@@ -107,7 +107,7 @@ class Raket {
     this.y = constrain(this.y,0,canvas.height - raster.celGrootte);
   }
 
-  toon() {
+  toon(); {
     image(this.sprite,this.x,this.y,raster.celGrootte,raster.celGrootte);
   }
 }
