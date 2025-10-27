@@ -173,7 +173,14 @@ function draw() {
   if (dist(eve.x + raster.celGrootte / 2, eve.y + raster.celGrootte / 2, xPositie, yPositie) < straal)   {
   levens += 1;
 
-
+    if (levens == 0) {
+    noLoop();
+    background(red);
+    fill('white');
+    text("Je hebt verloren!",30,300);
+    }
+  }
+  
   if (eve.wordtGeraakt(alice) || eve.wordtGeraakt(bob)) {
       noLoop();
   }
