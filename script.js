@@ -88,6 +88,14 @@ class Vijand {
     this.stapGrootte = null;
   }
 
+class Raket {
+  constructor(x,y){
+    this.x = x;
+    this.y = y;
+    this.snelheid
+  }
+}
+
 
 
 
@@ -173,6 +181,9 @@ function draw() {
   if (dist(eve.x + raster.celGrootte / 2, eve.y + raster.celGrootte / 2, xPositie, yPositie) < straal)   {
   levens += 1;
 
+  xPositie = random(straal, width - straal);
+  yPositie = random(straal, height - straal);
+    
     if (levens == 0) {
     noLoop();
     background(red);
